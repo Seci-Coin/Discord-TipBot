@@ -151,7 +151,7 @@ prettier goes to work and keeps code to our standard.
 ```
 yarn install --production=false
 ```
-to run prettier before submitting your code simply run the following in the bots root directory.
+To run prettier before submitting your code simply run the following in the bots root directory.
 
 ```
 yarn precommit
