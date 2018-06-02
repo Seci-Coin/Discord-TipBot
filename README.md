@@ -81,7 +81,7 @@ ENJOY!
 
 ## Manual-Installation
 
-## Requirements
+### Requirements
 
 - node > 8.0.0
 - npm > 0.12.x
