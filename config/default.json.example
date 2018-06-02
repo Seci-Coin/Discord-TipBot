@@ -39,7 +39,7 @@
   "pm2Name": "TipBot",
   "perms": ["Admin","Moderator","Community Leader","Bots"],// Roles that have access to all commands.
   "botDev": "Bot Developer",// Bot Devs!
-  "logchannel": "452126410190469121",// Channel to log the bots moderation..
-  "botspamchannels": ["452126410190469121", "452126410190469121"]//channel that the tip message will reply in if Multi or Role tip is used.
+  "logchannel": "429853685179351050",// Channel to log the bots moderation..
+  "botspamchannels": ["429134627823812612", "429134627823812612"]//channel that the tip message will reply in if Multi or Role tip is used.
   }
 }
