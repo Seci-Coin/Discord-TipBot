@@ -30,15 +30,16 @@
     "user": "username",
     "pass": "Do-Not-Use-This-Password-Youll-Be-Hacked-For-all-Teh-Moneys!"
   },
+  "secid": {
+    "port": 3339,
+    "user": "username",
+    "pass": "Do-Not-Use-This-Password-Youll-Be-Hacked-For-all-Teh-Moneys!"
+  },
   "moderation":{
   "pm2Name": "TipBot",
-   // Roles that have access to all commands.
-  "perms": ["Admin","Moderator","Community Leader","Bots"],
-  // Bot Devs!
-  "botDev": "Bot Developer",
-  // Channel to log the bots moderation..
-  "logchannel": "429853685179351050",
-  //channel that the tip message will reply in if Multi or Role tip is used.
-  "botspamchannels": ["429134627823812612", "429852470886268929"]
+  "perms": ["Admin","Moderator","Community Leader","Bots"],// Roles that have access to all commands.
+  "botDev": "Bot Developer",// Bot Devs!
+  "logchannel": "452126410190469121",// Channel to log the bots moderation..
+  "botspamchannels": ["452126410190469121", "452126410190469121"]//channel that the tip message will reply in if Multi or Role tip is used.
   }
 }
