@@ -11,17 +11,29 @@ Features:
     - LBRY Credits (LBC)
     - Uniform Fiscal Object (UFO)
     - ~~Proton (PROTON)~~ Higgs(PROTON)
+    - SECI
 
-## Auto-Installation
+## Create a bot, get the bot's API Token, and invite the bot to your Discord with its client ID
 
-for Windows Users Only!
+Create your bot and grab it's API Token and CLient ID here: https://discordapp.com/developers/applications/me
 
-Create a bot and get the bot's API Token:
-https://discordapp.com/developers/applications/me
+Invite your bot to your discord channel by visiting the follow url and replacing the client id with your bot's client ID (different from API token). You can do this later if you wish, but the bot must be invited before it can come online in your server.
 
-make sure you have setup your wallet config properly to facilitate this bot
+```https://discordapp.com/oauth2/authorize?client_id=CLIENTID&scope=bot```
 
-wallets data folder can be found in %appdata% (default Roaming Folder):
+## Install your wallet on the server machine
+
+Wallet must be bitcoind based (ravend, secid, etc) (aka bitcoin-qt wallet).
+
+## Auto-Installation Option (Manual Instructions Below)
+
+This auto-install scrypt is for Windows Users Only!
+
+### Setup your wallet config
+
+In most cases, your wallets data folder can be found in `%appdata%` (default Roaming Folder), e.g. `C:\Users\USER\AppData\Roaming\COIN`.
+
+Edit or create your `COIN.conf` file (Where "COIN" is the coin name) to include the following, where you should fill in the `rpcuser`, `rpcpassword`, and `rpcthreads`.
 
 ```
 server=1
@@ -43,11 +55,9 @@ staking=0
 enableaccounts=1
 ```
 
-edit and rename default.json.example in /config to default.json
+Edit and rename the `default.json.example` file in `/config` to `default.json`
 
-edit the following according to your wallets config options set in the previous step:
-
-(you can add more coins by following this format and using the exampleTipper.js)
+Edit the following according to your wallet's config options set in the previous step:
 
 ```
 "ravend": {
@@ -57,11 +67,15 @@ edit the following according to your wallets config options set in the previous 
 },
 ```
 
-to start the install run the windows-install.bat file!
+(you can add more coins by following this format and using the `exampleTipper.js` file in `/bot/modules`)
 
-before you start the file make sure the directories in ecosystem.config.js, you have to rename the old one from ecosystem.config.js.example to the file name above, properly match those of the project your deploying!
+Rename `ecosystem.config.js.example` to `ecosystem.config.js` and update the file paths in the file to the directories you want the log files to go to.
 
-and finally `pm2 start ecosystem.config.js`
+To start the install, run the `windows-install.bat` file!
+
+And finally, run `pm2 start ecosystem.config.js`
+
+The bot should come online in your channel, and you can run `!tiphelp` to get started!
 
 ENJOY!
 
@@ -73,15 +87,11 @@ ENJOY!
 - npm > 0.12.x
 - yarn ( install with npm install -g yarn if not installed )
 
-## Installation
+### Setup your wallet config
 
-Download the respective coins wallet that uses bitcoind (aka bitcoin-qt).
+In most cases, your wallets data folder can be found in `%appdata%` (default Roaming Folder), e.g. `C:\Users\USER\AppData\Roaming\COIN`.
 
-Create a bot and get the bot's Token: https://discordapp.com/developers/applications/me
-
-make sure you have setup your wallet config properly to facilitate this bot
-
-wallet folder found in %appdata% (default Roaming Folder):
+Edit or create your `COIN.conf` file (Where "COIN" is the coin name) to include the following, where you should fill in the `rpcuser`, `rpcpassword`, and `rpcthreads`.
 
 ```
 server=1
@@ -103,11 +113,9 @@ staking=0
 enableaccounts=1
 ```
 
-rename default.json.example in /config to default.json
+Edit and rename the `default.json.example` file in `/config` to `default.json`
 
-edit the following according to your wallets config options set in the previous step:
-
-(you can add more coins by following this format and using the exampleTipper.js)
+Edit the following according to your wallet's config options set in the previous step:
 
 ```
 "ravend": {
@@ -117,12 +125,23 @@ edit the following according to your wallets config options set in the previous 
 },
 ```
 
-then run:
+(you can add more coins by following this format and using the `exampleTipper.js` file in `/bot/modules`)
+
+Rename `ecosystem.config.js.example` to `ecosystem.config.js` and update the file paths in the file to the directories you want the log files to go to.
+
+Then run:
 
 ```
 npm install
+```
+
+And finally:
+
+```
 pm2 start ecosystem.config.js
 ```
+
+The bot should come online in your channel, and you can run `!tiphelp` to get started!
 
 ### Development
 
